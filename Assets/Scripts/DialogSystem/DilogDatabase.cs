@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class DilogDatabase : MonoBehaviour {
-
-	public List<Dialog> dilog = new List<Dialog>();
-
-	void Start()
-	{
-		dilog.Add(new Dialog("testText01", 2, 0));
-		dilog.Add(new Dialog("testText02", 1, 1));
-		dilog.Add(new Dialog("testText03", 3, 2));
-	}
+//
+//	public List<Answer> dilog = new List<Answer>();
+//
+//	void Start()
+//	{
+//		dilog.Add(new Answer("testText01", 2));
+//		dilog.Add(new Answer("testText02", 1));
+//		dilog.Add(new Answer("testText03", 3));
+//	}
 }

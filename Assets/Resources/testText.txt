@@ -1,6 +1,1 @@
-Unity is a cross-platform game engine developed by Unity Technologies and used to develop video games for PC, consoles, mobile devices and websites. 
-First announced only for Mac OS, at Apple’s Worldwide Developers Conference in 2005, it has since been extended to target more than fifteen platforms. 
-It is now the default software development kit (SDK) for the Wii U.
-
-Unity Pro is available for a fee and Unity Personal has no fee; it is available for any use to individuals or companies with less than US$100,000 of annual gross revenue.
-On March 3, 2015 with the release of Unity 5.0, Unity Technologies made the complete engine available for free including all features, less source code and support.
+testText
