@@ -6,17 +6,56 @@ using System.Collections.Generic;
 public class FileLoader : MonoBehaviour {
 
 	[SerializeField] Text textLabel;
-   // [SerializeField] string fileName; // Default message
+    public List<string> textFiles; 
+	public List<string> _answerzz; 
 	public List<Answer> answers = new List<Answer>();
 	[SerializeField] Button lol;
 	int y = -130; 
+	public int answerTextID = 0;
+	public int textID = 0;
+	public int answerID = 0;
 
 
-	void Start () {
-		ReadingFromFile("testText");
-		AnswerCreation("Hello!","testText 1", 0);
-		AnswerCreation("Bye!","testText 2", 1);
+	void Start () 
+	{
+		//DilogCreation(3, textFiles[0], _answerzz[0]);
+		DefaultDialog();
 	}
+
+	void DefaultDialog()
+	{
+		ReadingFromFile("testText"); // 2 answers
+		//AnswerCreation(_answerzz[0],textFiles[0], 0); // 3 answers
+	}
+
+	public void ClearingAnswers()
+	{
+		GameObject[] buttonList = GameObject.FindGameObjectsWithTag("Finish");
+		foreach(GameObject element in buttonList)
+		{
+			Destroy(element);
+			y = -130;
+		}
+	}
+
+//	void Update()
+//	{
+//		foreach(string element in textFiles)
+//		{
+//
+//		}
+//	}
+
+//	public void DilogCreation(int answerCount, string textName, string answersText)
+//	{
+//		Dilog dilog01 = new Dilog(answerCount, textName);
+//		dilog01.answCount = answerCount;
+//		Debug.Log(dilog01.answCount);
+//			for(int i = 0; i < dilog01.answCount; i++)
+//			{
+//				AnswerCreation(answersText, textName, i);
+//			}
+//	}
 
 	public void ReadingFromFile(string fileName)
 	{

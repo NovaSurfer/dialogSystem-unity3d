@@ -15,6 +15,16 @@ public class Answer{
 		index = textID;
 		nextFile = nextFileText;
 	}
+}
 
+public class Dilog{
+	
+	public int answCount;
+	public string fileNames;
 
+	public Dilog(int answerCount, string textFileNames)
+	{
+		answCount = answCount;
+		fileNames = textFileNames;
+	}
 }

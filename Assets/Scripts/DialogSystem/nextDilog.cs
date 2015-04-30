@@ -14,7 +14,16 @@ public class nextDilog : MonoBehaviour, IPointerDownHandler{
 
 	public void OnPointerDown(PointerEventData data)
 	{
-		fL.ReadingFromFile(fL.answers[index].nextFile);
+		CreatingAnswer(4);
+	}
 
+	public void CreatingAnswer(int count)
+	{
+		for(int i = 1; i < count; i++){
+			fL.ReadingFromFile(fL.answers[index].nextFile);
+			fL.ClearingAnswers();
+			fL.AnswerCreation(fL._answerzz[i],fL.textFiles[i], fL.answerID); // 3 answers
+			fL.answerID++;
+		}
 	}
 }
