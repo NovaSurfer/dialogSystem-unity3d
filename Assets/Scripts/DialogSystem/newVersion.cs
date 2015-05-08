@@ -12,4 +12,9 @@ public class newVersion : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	void DefaultDialog()
+	{
+
+	}
 }
