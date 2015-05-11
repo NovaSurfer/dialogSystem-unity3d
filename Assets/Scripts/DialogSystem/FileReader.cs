@@ -9,6 +9,7 @@ using System;
 
 public class FileReader : MonoBehaviour{
 
+	public string defaultDilogFile;
 	public Text dialogWindowText;
 	public Button answerButton;
 	int y = -130; 
@@ -17,13 +18,13 @@ public class FileReader : MonoBehaviour{
     {
 		string[] answersArray;
 		TextAsset mydata = Resources.Load(fileName, typeof(TextAsset)) as TextAsset; 
-		string[] fileLines = mydata.text.Split('\n');
+		string[] fileLines = mydata.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
 		dialogWindowText.text = fileLines[0];
-		for(int i = 1; i < fileLines.Length; i++)
-		{
-			if(answerButton != null){
+		for(int i = 1; i < fileLines.Length; i++) {
+			if(answerButton != null) {
 				Button ansBtn = (Button)Instantiate(answerButton);
 				answersArray = fileLines[i].Split(new string[] { "#->" }, StringSplitOptions.None);
+				//Debug.Log("["+answersArray[0]+"]" + "["+answersArray[1]+"]");
 				ansBtn.GetComponent<nextDilog>().file = answersArray[1];
 				ansBtn.transform.parent = this.gameObject.transform;
 				ansBtn.GetComponent<RectTransform>().localPosition = new Vector3(0, y = y - 43, 0);
@@ -34,7 +35,7 @@ public class FileReader : MonoBehaviour{
 	}
 
 	void Start(){
-		ReadFromFile("testText");
+		ReadFromFile(defaultDilogFile);
 	}
 
 	public void ClearAll(){
