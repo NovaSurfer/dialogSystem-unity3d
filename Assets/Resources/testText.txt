@@ -1,2 +1,2 @@
-Привет, меня зовут Максим!
-Привет, меня зовут Андрей.#->testText1
+Hi I'am Alex.
+Hi I'am Tom. #->testText1
