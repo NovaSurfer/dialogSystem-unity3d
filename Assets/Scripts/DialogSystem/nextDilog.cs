@@ -4,6 +4,7 @@ using System.Collections;
 
 public class nextDilog : MonoBehaviour, IPointerDownHandler{
 
+    [HideInInspector]
 	public string file;         // Имя следующего файла с диалогом
 	
 	public void OnPointerDown(PointerEventData data)                                                    // Принажатии на ответ..
