@@ -26,7 +26,7 @@ public class FileReader : MonoBehaviour{
 				answersArray = fileLines[i].Split(new string[] { "#->" }, StringSplitOptions.None);                             // Режем строку с текстом ответа до тега "#->"
 				//Debug.Log("["+answersArray[0]+"]" + "["+answersArray[1]+"]");
                 ansBtn.GetComponent<nextDilog>().file = answersArray[1];                                                        // Второй "кусок", отрезанной выше строки answersArray[1], присваиваем переменной file класса nextDilog
-				ansBtn.transform.parent = this.gameObject.transform;                                                            // Делаем созданную кнопку дочерней по отношению к Canvas (!для этого скрипт должен быть прикреплен к Canvas!)
+                ansBtn.transform.SetParent(this.transform);                                                                     // Делаем созданную кнопку дочерней по отношению к Canvas (!для этого скрипт должен быть прикреплен к Canvas!)
 				ansBtn.GetComponent<RectTransform>().localPosition = new Vector3(0, y = y - 43, 0);                             // Смещаем нашу кнопку вниз на 43 пикселя от позиции последней кнопки (только по оси Y)
 				Text answText = ansBtn.GetComponentInChildren<Text>();                                                          // Получаем дочерний текстовый объект нашей кнопки
                 answText.text = answersArray[0];                                                                                // Присваиваем текст к кнопке из answersArray[0], который был получен ранее (до тега "#->")
