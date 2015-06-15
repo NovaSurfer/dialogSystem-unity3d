@@ -24,7 +24,7 @@
 
  `First line`   =   main window text  
  `Other lines`  =   answer text  
- `After #->`    =   next dialog file
+ `After #->`    =   next dialog file  
  `\end\ after #->` = end of the dialog, clearing all answers and main window text
  
  **2) Create folder "Resources" and place your dialogs here**   
