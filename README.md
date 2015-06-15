@@ -4,7 +4,7 @@
 # Features:
 * Easy to use
 * Write the dialogues in your favorite text editor
-* Tags (coming soon)
+* Tags
 
 # TODO:
 * Add more tags
@@ -19,12 +19,13 @@
 
 `Second dialog file` 
 >How are you Tom?  
->Awesome possum! #->testText  
->All is bad... #->testText  
+>Awesome possum!  #->testText  
+>All is bad...    #->/end/  
 
  `First line`   =   main window text  
  `Other lines`  =   answer text  
  `After #->`    =   next dialog file
+ `\end\ after #->` = end of the dialog, clearing all answers and main window text
  
  **2) Create folder "Resources" and place your dialogs here**   
  ![Resources](https://habrastorage.org/files/d62/9cd/e1c/d629cde1ced04d19b60b81b87b22fa55.png)  
